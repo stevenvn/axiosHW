@@ -99,11 +99,12 @@
                   placeholder="Nhập từ khóa"
                   aria-label="Recipient's username"
                   aria-describedby="basic-addon2"
+                  id="inputSearch"
                 />
                 <div class="input-group-append">
-                  <span class="input-group-text" id="basic-addon2"
-                    ><i class="fa fa-search"></i
-                  ></span>
+                  <button id="search" type="button" class="btn btn-primary">
+                    Search
+                  </button>
                 </div>
               </div>
               <!-- END TÌM KIẾM -->
@@ -151,6 +152,7 @@
                   class="form-control"
                   placeholder="place your full name"
                 />
+                <span id="fullNameError"></span>
               </div>
               <div class="form-group">
                 <label>Phone Number</label>
@@ -183,11 +185,12 @@
                   class="form-control"
                   placeholder="place your phone number"
                 />
+                <span id="emailError"></span>
+                <!-- Modal footer -->
+                <div class="modal-footer"></div>
+                <!-- <button class="btn btn-info" id="add">Add Customer</button> -->
               </div>
-              <button class="btn btn-info" id="add">Add Customer</button>
             </div>
-            <!-- Modal footer -->
-            <div class="modal-footer"></div>
           </div>
         </div>
       </div>
@@ -226,6 +229,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script src="../validation/validation.js"></script>
     <script src="../models/customer.js"></script>
     <script src="../services/customerService.js"></script>
     <script src="../controllers/main.js"></script>

@@ -6,10 +6,23 @@ function CustomerService() {
       method: "GET",
     });
   };
+  this.getIndividualCustomerAPI = function (id) {
+    return axios({
+      url: baseURL + "/" + id,
+      method: "GET",
+    });
+  };
   this.addProductAPI = function (customer) {
     return axios({
       url: baseURL,
       method: "POST",
+      data: customer,
+    });
+  };
+  this.updateCustomerAPI = function (customer) {
+    return axios({
+      url: baseURL + `/${customer.id}`,
+      method: "PUT",
       data: customer,
     });
   };
